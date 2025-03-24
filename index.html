@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ali Heidari</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white font-sans">
+
+    <!-- Header avec effet de verre -->
+    <header class="sticky top-0 z-50 backdrop-blur-lg bg-opacity-30 bg-gray-900 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-6 py-4">
+            <h1 class="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+                Ali Heidari
+            </h1>
+            <nav>
+                <ul class="flex space-x-8 text-lg">
+                    <li><a href="#about" class="text-white hover:text-purple-400 transition-colors duration-300">À propos</a></li>
+                    <li><a href="#skills" class="text-white hover:text-purple-400 transition-colors duration-300">Compétences</a></li>
+                    <li><a href="#languages" class="text-white hover:text-purple-400 transition-colors duration-300">Langues</a></li>
+                    <li><a href="#experience" class="text-white hover:text-purple-400 transition-colors duration-300">Expériences</a></li>
+                    <li><a href="#projects" class="text-white hover:text-purple-400 transition-colors duration-300">Projets</a></li>
+                    <li><a href="#contact" class="text-white hover:text-purple-400 transition-colors duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section À propos avec animation -->
+    <section id="about" class="py-20 animate-fade-in">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-header text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+                À propos de moi
+            </h2>
+            <p class="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
+                Étudiant en deuxième année de BTS SIO (Services Informatiques aux Organisations), je me spécialise en tant que développeur full stack. Passionné par le développement web et les nouvelles technologies, je maîtrise le front-end (HTML, CSS, JavaScript) ainsi que le back-end (C#, Python, PHP, SQL).
+            </p>
+        </div>
+    </section>
+
+    <!-- Nouvelle section Langues -->
+    <section id="languages" class="py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-header text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+                Compétences Linguistiques
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="language-card p-6 rounded-xl">
+                    <i class="fas fa-language text-4xl mb-4 text-purple-400"></i>
+                    <h3 class="text-2xl font-bold mb-2">Persan</h3>
+                    <p class="text-gray-300">Langue maternelle</p>
+                    <div class="skill-bar mt-4">
+                        <div class="skill-progress" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="language-card p-6 rounded-xl">
+                    <i class="fas fa-language text-4xl mb-4 text-purple-400"></i>
+                    <h3 class="text-2xl font-bold mb-2">Français</h3>
+                    <p class="text-gray-300">Courant</p>
+                    <div class="skill-bar mt-4">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="language-card p-6 rounded-xl">
+                    <i class="fas fa-language text-4xl mb-4 text-purple-400"></i>
+                    <h3 class="text-2xl font-bold mb-2">Anglais</h3>
+                    <p class="text-gray-300">Avancé</p>
+                    <div class="skill-bar mt-4">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="language-card p-6 rounded-xl">
+                    <i class="fas fa-language text-4xl mb-4 text-purple-400"></i>
+                    <h3 class="text-2xl font-bold mb-2">Néerlandais</h3>
+                    <p class="text-gray-300">Courant</p>
+                    <div class="skill-bar mt-4">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modifier les sections existantes pour correspondre au nouveau design -->
+    <section id="skills" class="py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-header text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                Compétences
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-4 bg-gray-800 shadow-md rounded-lg hover:shadow-xl transition-shadow text-gray-300">Front-end : HTML, CSS, JavaScript</div>
+                <div class="p-4 bg-gray-800 shadow-md rounded-lg hover:shadow-xl transition-shadow text-gray-300">Back-end : C#, Python, PHP, SQL</div>
+                <div class="p-4 bg-gray-800 shadow-md rounded-lg hover:shadow-xl transition-shadow text-gray-300">Développement Web & Applications</div>
+                <div class="p-4 bg-gray-800 shadow-md rounded-lg hover:shadow-xl transition-shadow text-gray-300">Cybersécurité</div>
+                <div class="p-4 bg-gray-800 shadow-md rounded-lg hover:shadow-xl transition-shadow text-gray-300">Systèmes d'exploitation : Debian Linux, Windows</div>
+                <div class="p-4 bg-gray-800 shadow-md rounded-lg hover:shadow-xl transition-shadow text-gray-300">Design graphique : Photoshop, Illustrator</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expériences -->
+    <section id="experience" class="py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-header text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+                Expériences
+            </h2>
+            <div class="space-y-8">
+                <div class="language-card p-6 rounded-xl hover:scale-105 transition-transform">
+                    <h3 class="text-3xl font-semibold mb-2 text-purple-300">Stagiaire - Passeport Forma</h3>
+                    <p class="text-gray-400 mb-2">Janvier 2025 - Février 2025</p>
+                    <p class="text-gray-300">Réalisation de travaux sur des systèmes et du design graphique.</p>
+                </div>
+                <div class="language-card p-6 rounded-xl hover:scale-105 transition-transform">
+                    <h3 class="text-3xl font-semibold mb-2 text-purple-300">Stagiaire - Passeport Forma</h3>
+                    <p class="text-gray-400 mb-2">Mai 2024 - Juin 2024</p>
+                    <p class="text-gray-300">Réalisation de travaux sur des systèmes et du design graphique.</p>
+                </div>
+                <div class="language-card p-6 rounded-xl hover:scale-105 transition-transform">
+                    <h3 class="text-3xl font-semibold mb-2 text-purple-300">Employé commerce - La Foir'Fouille</h3>
+                    <p class="text-gray-400 mb-2">Avril 2021 - Mai 2021</p>
+                    <p class="text-gray-300">Gestion des stocks et organisation des rayons.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Formations -->
+    <section id="education" class="py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-header text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+                Formations
+            </h2>
+            <div class="space-y-8">
+                <div class="language-card p-6 rounded-xl hover:scale-105 transition-transform">
+                    <h3 class="text-3xl font-semibold text-purple-300">BTS SIO - Lycée André Malraux</h3>
+                    <p class="text-gray-400 mb-2">2023 - 2024</p>
+                    <p class="text-gray-300">Option Solutions Logicielles et Applications Métiers</p>
+                </div>
+                <div class="language-card p-6 rounded-xl hover:scale-105 transition-transform">
+                    <h3 class="text-3xl font-semibold text-purple-300">Baccalauréat technologique STI2D</h3>
+                    <p class="text-gray-400">2020 - 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects" class="py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-header text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+                Projets
+            </h2>
+            <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-3">
+                <div class="language-card p-6 rounded-xl hover:scale-105 transition-transform">
+                    <h3 class="text-3xl font-semibold mb-4 text-purple-300">GSBExtranet</h3>
+                    <p class="text-gray-400 mb-4">Application web pour la gestion des visiteurs médicaux</p>
+                    <a href="https://s5-5029.nuage-peda.fr/2eann%c3%a9e/AP/gsbextranetB3/" 
+                       class="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300">
+                        Voir plus
+                    </a>
+                </div>
+                <div class="language-card p-6 rounded-xl hover:scale-105 transition-transform">
+                    <h3 class="text-3xl font-semibold mb-4 text-purple-300">Projet Symfony</h3>
+                    <p class="text-gray-400 mb-4">Application développée avec le framework Symfony</p>
+                    <a href="https://s5-5029.nuage-peda.fr/share/" 
+                       class="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300">
+                        Voir plus
+                    </a>
+                </div>
+                <div class="language-card p-6 rounded-xl hover:scale-105 transition-transform">
+                    <h3 class="text-3xl font-semibold mb-4 text-purple-300">Polémique</h3>
+                    <p class="text-gray-400 mb-4">Ma marque de vêtements - Design et E-commerce</p>
+                    <a href="https://polemique.co/" 
+                       class="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300">
+                        Voir la boutique
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-header text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+                Contact
+            </h2>
+            <div class="language-card p-8 rounded-xl max-w-2xl mx-auto">
+                <div class="space-y-4">
+                    <p class="text-lg">
+                        <i class="fas fa-phone text-purple-400 mr-3"></i>
+                        <span class="text-gray-300">06 12 03 64 72</span>
+                    </p>
+                    <p class="text-lg">
+                        <i class="fas fa-envelope text-purple-400 mr-3"></i>
+                        <a href="mailto:ali.heidari.2604@gmail.com" class="text-gray-300 hover:text-purple-400 transition-colors">
+                            ali.heidari.2604@gmail.com
+                        </a>
+                    </p>
+                    <p class="text-lg">
+                        <i class="fab fa-linkedin text-purple-400 mr-3"></i>
+                        <a href="http://www.linkedin.com/in/ali-heidari26" class="text-gray-300 hover:text-purple-400 transition-colors">
+                            Profil LinkedIn
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://linkedin.com/in/ali-heidari26" class="text-2xl hover:text-purple-400 transition-colors">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:ali.heidari.2604@gmail.com" class="text-2xl hover:text-purple-400 transition-colors">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 Ali Heidari. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animation des barres de compétences au défilement
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
