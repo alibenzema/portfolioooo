@@ -159,15 +159,24 @@
                     <i class="fas fa-award text-4xl mb-4 text-purple-400"></i>
                     <h3 class="text-2xl font-bold mb-4 text-purple-300">Certification PIX</h3>
                     <p class="text-gray-400 mb-4">Certification des compétences numériques</p>
-                    <a href="https://drive.google.com/drive/u/0/my-drive" 
-                       class="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300"
-                       target="_blank">
+                    <button onclick="openModal('public/attestation-pix-20250306.pdf')"
+                            class="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300">
                         Voir l'attestation
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal pour l'attestation -->
+    <div id="pdfModal" class="fixed inset-0 hidden bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div class="bg-white p-4 rounded-lg w-11/12 h-5/6 relative">
+            <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-800 hover:text-gray-600">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <iframe id="pdfViewer" class="w-full h-full rounded" src="" frameborder="0"></iframe>
+        </div>
+    </div>
 
     <!-- Section Projets -->
     <section id="projects" class="py-16">
@@ -260,6 +269,25 @@
 
         document.querySelectorAll('section').forEach((section) => {
             observer.observe(section);
+        });
+
+        function openModal(pdfPath) {
+            document.getElementById('pdfViewer').src = pdfPath;
+            document.getElementById('pdfModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('pdfModal').classList.add('hidden');
+            document.getElementById('pdfViewer').src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fermer la modal si on clique en dehors
+        document.getElementById('pdfModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
         });
     </script>
 </body>
