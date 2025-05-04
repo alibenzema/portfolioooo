@@ -21,10 +21,18 @@
                     <li><a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors duration-300">À propos</a></li>
                     <li><a href="#skills" class="text-gray-700 hover:text-purple-600 transition-colors duration-300">Compétences</a></li>
                     <li><a href="#languages" class="text-gray-700 hover:text-purple-600 transition-colors duration-300">Langues</a></li>
+                    <li><a href="#education" class="text-gray-700 hover:text-purple-600 transition-colors duration-300">Formations</a></li>
                     <li><a href="#experience" class="text-gray-700 hover:text-purple-600 transition-colors duration-300">Expériences</a></li>
                     <li><a href="#certifications" class="text-gray-700 hover:text-purple-600 transition-colors duration-300">Certifications</a></li>
                     <li><a href="#projects" class="text-gray-700 hover:text-purple-600 transition-colors duration-300">Projets</a></li>
+                    <li><a href="#veille" class="text-gray-700 hover:text-purple-600 transition-colors duration-300">Veille</a></li>
                     <li><a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors duration-300">Contact</a></li>
+                    <li>
+                        <button onclick="openModal('CV.pdf')" 
+                                class="text-gray-700 hover:text-purple-600 transition-colors duration-300">
+                            CV
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -68,7 +76,7 @@
                 <div class="language-card p-6 rounded-xl">
                     <i class="fas fa-language text-4xl mb-4 text-purple-600"></i>
                     <h3 class="text-2xl font-bold mb-2">Anglais</h3>
-                    <p class="text-gray-600">Avancé</p>
+                    <p class="text-gray-600">Courant</p>
                     <div class="skill-bar mt-4">
                         <div class="skill-progress" style="width: 90%"></div>
                     </div>
@@ -133,10 +141,16 @@
                     <h3 class="text-3xl font-semibold mb-2 text-purple-600">Stagiaire - Passeport Forma</h3>
                     <p class="text-gray-500 mb-2">Janvier 2025 - Février 2025</p>
                     <p class="text-gray-600 mb-4">Réalisation de travaux sur des systèmes et du design graphique.</p>
-                    <button onclick="openStageModal()"
-                            class="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-blue-600 transition-all duration-300 text-white">
-                        Voir détails
-                    </button>
+                    <div class="flex justify-center space-x-4">
+                        <button onclick="openStageModal()"
+                                class="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-blue-600 transition-all duration-300 text-white">
+                            Voir détails
+                        </button>
+                        <button onclick="openStageImagesModal()"
+                                class="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-blue-600 transition-all duration-300 text-white">
+                            Voir photos
+                        </button>
+                    </div>
                 </div>
                 <div class="language-card p-6 rounded-xl hover:scale-105 transition-transform">
                     <h3 class="text-3xl font-semibold mb-2 text-purple-600">Stagiaire - Passeport Forma</h3>
@@ -179,6 +193,25 @@
                         <p>Travail avec les pôles bureautique, infographie, sérigraphie et orientation professionnelle.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nouveau Modal pour les images du stage -->
+    <div id="stageImagesModal" class="fixed inset-0 hidden bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg w-11/12 md:w-4/5 h-5/6 relative overflow-y-auto">
+            <button onclick="closeStageImagesModal()" class="absolute top-4 right-4 text-gray-800 hover:text-gray-600">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <h3 class="text-3xl font-bold mb-8 text-gray-800">Photos du Stage - Passeport Forma</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <img src="1.jpg" alt="Stage Image 1" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <img src="2.jpg" alt="Stage Image 2" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <img src="3.jpg" alt="Stage Image 3" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <img src="4.jpg" alt="Stage Image 4" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <img src="5.jpg" alt="Stage Image 5" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <img src="6.jpg" alt="Stage Image 6" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <img src="7.jpg" alt="Stage Image 7" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
             </div>
         </div>
     </div>
@@ -233,7 +266,7 @@
                     <div class="flex justify-center space-x-4">
                         <a href="https://s5-5029.nuage-peda.fr/share/" 
                            class="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-blue-600 transition-all duration-300 text-white">
-                            Voir plus
+                            Voir le site
                         </a>
                         <button onclick="openProjectModal()"
                                 class="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-blue-600 transition-all duration-300 text-white">
@@ -244,14 +277,38 @@
                 <div class="language-card p-6 rounded-xl hover:scale-105 transition-transform">
                     <h3 class="text-3xl font-semibold mb-4 text-purple-600">Polémique</h3>
                     <p class="text-gray-500 mb-4">Ma marque de vêtements - Design et E-commerce</p>
-                    <a href="https://polemique.co/" 
-                       class="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-blue-600 transition-all duration-300 text-white">
-                        Voir la boutique
-                    </a>
+                    <div class="flex justify-center space-x-4">
+                        <a href="https://polemique.co/" 
+                           class="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-blue-600 transition-all duration-300 text-white">
+                            Voir la boutique
+                        </a>
+                        <button onclick="openMockupsModal()"
+                                class="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-blue-600 transition-all duration-300 text-white">
+                            Voir mockups
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Nouveau Modal pour les mockups -->
+    <div id="mockupsModal" class="fixed inset-0 hidden bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg w-11/12 md:w-4/5 h-5/6 relative overflow-y-auto">
+            <button onclick="closeMockupsModal()" class="absolute top-4 right-4 text-gray-800 hover:text-gray-600">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <h3 class="text-3xl font-bold mb-8 text-gray-800">Mockups Polémique</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <img src="black hoodie.png" alt="Black Hoodie" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <img src="black pants.png" alt="Black Pants" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <img src="card design-01.png" alt="Card Design" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <img src="green hoodie .png" alt="Green Hoodie" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <img src="green pants.png" alt="Green Pants" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <img src="italy font black-01.png" alt="Italy Font Black" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+            </div>
+        </div>
+    </div>
 
     <!-- Nouveau Modal pour le résumé du projet -->
     <div id="projectModal" class="fixed inset-0 hidden bg-black bg-opacity-50 z-50 flex items-center justify-center">
@@ -285,6 +342,37 @@
             </div>
         </div>
     </div>
+
+    <!-- Section Veille Technologique -->
+    <section id="veille" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-header text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                Veille Technologique
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="language-card p-6 rounded-xl hover:scale-105 transition-transform">
+                    <i class="fas fa-rss text-4xl mb-4 text-purple-600"></i>
+                    <h3 class="text-2xl font-bold mb-4 text-purple-600">Feedly</h3>
+                    <p class="text-gray-500 mb-4">Agrégateur de flux RSS pour suivre les blogs tech et les actualités du développement</p>
+                    <p class="text-gray-600">Suivi quotidien des dernières tendances en développement web et logiciel</p>
+                </div>
+
+                <div class="language-card p-6 rounded-xl hover:scale-105 transition-transform">
+                    <i class="fab fa-linkedin text-4xl mb-4 text-purple-600"></i>
+                    <h3 class="text-2xl font-bold mb-4 text-purple-600">LinkedIn</h3>
+                    <p class="text-gray-500 mb-4">Réseau professionnel et veille métier</p>
+                    <p class="text-gray-600">Connexion avec des experts du domaine et suivi des innovations technologiques</p>
+                </div>
+
+                <div class="language-card p-6 rounded-xl hover:scale-105 transition-transform">
+                    <i class="fab fa-telegram text-4xl mb-4 text-purple-600"></i>
+                    <h3 class="text-2xl font-bold mb-4 text-purple-600">Telegram</h3>
+                    <p class="text-gray-500 mb-4">Canaux spécialisés en développement</p>
+                    <p class="text-gray-600">Abonnement à des groupes d'actualités tech et de partage de connaissances</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Section Contact -->
     <section id="contact" class="py-16 bg-white">
@@ -442,6 +530,42 @@
         document.getElementById('stageModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeStageModal();
+            }
+        });
+
+        // Fonctions pour le modal des mockups
+        function openMockupsModal() {
+            document.getElementById('mockupsModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMockupsModal() {
+            document.getElementById('mockupsModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fermer le modal des mockups si on clique en dehors
+        document.getElementById('mockupsModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeMockupsModal();
+            }
+        });
+
+        // Fonctions pour le modal des images du stage
+        function openStageImagesModal() {
+            document.getElementById('stageImagesModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeStageImagesModal() {
+            document.getElementById('stageImagesModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fermer le modal des images du stage si on clique en dehors
+        document.getElementById('stageImagesModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeStageImagesModal();
             }
         });
     </script>
